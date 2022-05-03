@@ -1,0 +1,61 @@
+#artbio{
+font-family:inherit;
+color: white;
+
+}
+#player1{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+border-radius: -50%;
+}
+#btn{
+display:flex;
+padding-top: 54px
+
+}
+
+.rounded-circle{
+  -moz-box-shadow: 0px 6px 5px #ccc;
+  -webkit-box-shadow: 0px 6px 5px #ccc;
+  box-shadow: 0px 6px 5px #ccc;
+  -moz-border-radius:190px;
+  -webkit-border-radius:190px;
+  border-radius:190px;
+}
+
+
+#trackList {
+
+   -webkit-column-count: 4;
+      -moz-column-count: 4;
+           column-count: 4;
+
+border-radius: -50%;
+}
+
+#uList li{
+
+display: inline-block;
+padding-right: 100px;
+margin-right: -50%;
+border-radius: -50%;
+
+}
+#imgdiv{
+  border-radius: -50%;
+}
+
+#body1 {
+  background-color: purple;
+}
+
+
+@media screen and (max-width: 750px) {
+.rounded-circle{
+  height:25px;
+  width:25px;
+}
+}
