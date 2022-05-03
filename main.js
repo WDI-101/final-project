@@ -68,7 +68,7 @@ async function Setup() {
 
   if (ArtistBio.search.data.artists[0].bios !== undefined) {
 
-    let artistsInfo = ArtistBio.search.data.artists[0].bios[0].bio; 
+    let artistsInfo = ArtistBio.search.data.artists[0].bios[0].bio;
 
     console.log(artistsInfo, '1');
 

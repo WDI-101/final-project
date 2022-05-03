@@ -65,35 +65,3 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
-
-
-  <!-Paging
-
-Most of the APIs you'd expect to support paging, do
-(charts lists, etc.). Use limit and offset parameters to get what you want, like so:
-
-/v2.2/artists/top?limit=5
-/v2.2/artists/top?limit=5&offset=5
-The max limit supported is 200. If an invalid limit , a negative limit or a limit higher than 200 is passed,
-a 400 error will be returned.
-
-->
-
-<!-International Catalog
-
-Unless otherwise specified, all metadata requests will be routed to the US catalog. If you'd like to use a
-specific catalog other than US, just pass in the two-letter country code (which is case-sensitive)
-
-/v2.2/artists/art.978/bio?limit=5&catalog=DE
-/v2.2/artists/art.978/bio?limit=5&catalog=US
-Authenticated requests (e.g., those made with OAuth access tokens)
-will be routed automatically to the member's default catalog.->
-
-<!-Filter Streamable Content
-
-Many api calls support the isStreamableOnly=true flag.
-This query string parameter will filter out content that is not streamable.
-
-WARNING Passing this flag will make the totalCount value inaccurate on many endpoints.
-You will need to paginate until no more data is received to ensure you are at the end of the list.
-If you do not pass this flag, then all pagination values will be accurate.->
