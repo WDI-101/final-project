@@ -52,11 +52,9 @@ async function home() {
 
 async function Setup() {
 
-  let Topart = await fetch(`http://api.napster.com/v2.2/artists/top?apikey=Y2ZkODIzYjItYTlhYi00MzFmLWJiY2EtMThmYTRhZDg1ODY3`);
 
-  let Topartist = await Topart.json();
 
-  console.log(Topartist);
+
 
   let getId = await fetch(`http://api.napster.com/v2.2/search/verbose?apikey=Y2ZkODIzYjItYTlhYi00MzFmLWJiY2EtMThmYTRhZDg1ODY3&per_type_limit=10&query=${tryOuts.value}&type=track`);
 
@@ -70,7 +68,7 @@ async function Setup() {
 
   if (ArtistBio.search.data.artists[0].bios !== undefined) {
 
-    let artistsInfo = ArtistBio.search.data.artists[0].bios[0].bio; // im grabbing first array
+    let artistsInfo = ArtistBio.search.data.artists[0].bios[0].bio; 
 
     console.log(artistsInfo, '1');
 
@@ -100,6 +98,9 @@ async function Setup() {
 
 
 
+    let artistsInfoDeploy = artistsInfo;
+
+    $(`#artbio`).append(artistsInfoDeploy);
 
 
   } else {
